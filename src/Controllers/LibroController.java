@@ -7,17 +7,12 @@ public class LibroController {
 
     public void sortByName(Book[] libros) {
         view.showMessage("Lista Ordenada por Metodo Insercion");
-
-        
-
         int n = libros.length;
-    
         for (int i = 0; i < n - 1; i++) {
             int indiceMayor = i;
-    
             for (int j = i + 1; j < n; j++) {
                 if (libros[j].getName().toLowerCase().compareTo(libros[indiceMayor].getName().toLowerCase()) > 0) {
-                    indiceMayor = j;                                                    // Cambio Ascendente <
+                    indiceMayor = j;                                                    
                 }
             }
             if (i != indiceMayor) {
