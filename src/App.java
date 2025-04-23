@@ -1,3 +1,7 @@
+import Controllers.LibroController;
+import Models.Book;
+import Views.ViewConsole;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -34,5 +38,16 @@ public class App {
                 new Book("The Elements of Statistical Learning", 2001)
         };
 
+        LibroController lController= new LibroController(); 
+        ViewConsole view = new ViewConsole();
+        view.mostrarArreglo(books);
+
+        lController.sortByName(books);
+
+        view.mostrarArreglo(books);
+
+        view.mostrarBusqueda(books, "python the best book");
+        view.mostrarBusqueda(books, "deep learning");
     }
 }
+
